@@ -36,5 +36,60 @@
             <i class="fab fa-instagram"></i> Follow
         </button>
     </div>
+
+    <div class="contenedor-galeria">
+        <div class="carrusel activo">
+            <div class="galeria">
+                <div class="publicacion"><img src="imagenes_prueb/Adventure Time 50.jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/descarga (2).jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/descarga (3).jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/descarga (4).jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/descarga (5).jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/descarga (6).jpeg" class="img-fluid" alt=""></div>
+            </div>
+        </div>
+
+        <div class="carrusel">
+            <div class="galeria">
+                <div class="publicacion"><img src="imagenes_prueb/descarga (7).jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/Hidan e Kakuzo.jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/hunter x hunter.jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/imagen9.jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/imagen10.jpeg" class="img-fluid" alt=""></div>
+                <div class="publicacion"><img src="imagenes_prueb/imagen11.jpeg" class="img-fluid" alt=""></div>
+            </div>
+        </div>
+
+        <button class="btn-anterior">&#10094;</button>
+        <button class="btn-siguiente">&#10095;</button>
+    </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const carruseles = document.querySelectorAll(".carrusel");
+    const btnAnterior = document.querySelector(".btn-anterior");
+    const btnSiguiente = document.querySelector(".btn-siguiente");
+    let indiceActual = 0;
+
+    function mostrarCarrusel(indice) {
+        carruseles.forEach((carrusel, i) => {
+            carrusel.classList.toggle("activo", i === indice);
+        });
+    }
+
+    btnSiguiente.addEventListener("click", () => {
+        indiceActual = (indiceActual + 1) % carruseles.length;
+        mostrarCarrusel(indiceActual);
+    });
+
+    btnAnterior.addEventListener("click", () => {
+        indiceActual = (indiceActual - 1 + carruseles.length) % carruseles.length;
+        mostrarCarrusel(indiceActual);
+    });
+
+    mostrarCarrusel(indiceActual);
+});
+
+</script>
 </body>
 </html>

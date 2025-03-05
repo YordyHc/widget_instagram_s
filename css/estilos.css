@@ -70,3 +70,63 @@
 .boton-seg i {
     margin-right: 5px;
 }
+
+/*GALERIA ------------------------*/
+.contenedor-galeria {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ajusta según el diseño */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrusel {
+    display: none; /* Ocultar los carruseles por defecto */
+}
+
+.carrusel.activo {
+    display: block; /* Mostrar solo el carrusel activo */
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+}
+
+.publicacion {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.publicacion img:hover{
+    filter: brightness(50%);
+}
+.publicacion img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+}
+
+/* Botones del carrusel */
+.btn-anterior,
+.btn-siguiente {
+    position: absolute;
+    top: 33%; /* Entre la primera y segunda fila */
+    transform: translateY(220%);
+    background-color: rgba(0, 0, 0, 0.568);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.btn-anterior { left: 0px; }
+.btn-siguiente { right: 0px; }
+
+.btn-anterior:hover,
+.btn-siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.847);
+}
