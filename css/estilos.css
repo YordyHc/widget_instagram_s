@@ -1,4 +1,4 @@
-.profile-container {
+.perfil {
     display: flex;
     align-items: center;
     background: white;
@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.profile-pic {
+.perfil-img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -16,40 +16,46 @@
     margin-right: 15px;
 }
 
-.profile-info {
+.perfil-info {
     flex-grow: 1;
+    display: flex;
+    max-width: 50%;
 }
 
-.profile-header h2 {
-    font-size: 18px;
+.perfil-nom h2 {
+    font-size: 17px;
     display: flex;
     align-items: center;
     margin: 0;
 }
 
-.profile-header p {
+.perfil-nom p {
     margin: 2px 0;
     color: gray;
 }
 
-.verified-icon {
+.verificado {
     width: 16px;
-    margin-left: 5px;
     border-radius: 50%;
 }
 
-.stats {
+.estats {
     display: flex;
     gap: 15px;
-    font-size: 14px;
-    color: #333;
+    width: 40%;
 }
 
-.stats strong {
+.cant{
+    font-size: 18px;
     font-weight: bold;
 }
 
-.follow-btn {
+.divper{
+    font-size: 13px;
+    color: gray;
+}
+
+.boton-seg {
     background-color: #0095f6;
     color: white;
     border: none;
@@ -61,6 +67,6 @@
     font-size: 14px;
 }
 
-.follow-btn i {
+.boton-seg i {
     margin-right: 5px;
 }
