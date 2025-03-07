@@ -37,33 +37,69 @@
         </button>
     </div>
 
-    <div class="contenedor-galeria">
-        <div class="carrusel activo">
-            <div class="galeria">
-                <div class="publicacion"><img src="imagenes_prueb/Adventure Time 50.jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/descarga (2).jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/descarga (3).jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/descarga (4).jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/descarga (5).jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/descarga (6).jpeg" class="img-fluid" alt=""></div>
+    
+<div class="contenedor-galeria">
+    <div class="carrusel activo">
+        <div class="galeria">
+            <div class="publicacion">
+                <img src="imagenes_prueb/Adventure Time 50.jpeg" class="img-fluid" alt="">
+                <div class="overlay">Adventure Time</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/descarga (2).jpeg" class="img-fluid" alt="">
+                <div class="overlay">Prueba opacidad</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/descarga (3).jpeg" class="img-fluid" alt="">
+                <div class="overlay">Imagen 3</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/descarga (4).jpeg" class="img-fluid" alt="">
+                <div class="overlay">Imagen 4</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/descarga (5).jpeg" class="img-fluid" alt="">
+                <div class="overlay">Imagen 5</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/descarga (6).jpeg" class="img-fluid" alt="">
+                <div class="overlay">Imagen 6</div>
             </div>
         </div>
-
-        <div class="carrusel">
-            <div class="galeria">
-                <div class="publicacion"><img src="imagenes_prueb/descarga (7).jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/Hidan e Kakuzo.jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/hunter x hunter.jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/imagen9.jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/imagen10.jpeg" class="img-fluid" alt=""></div>
-                <div class="publicacion"><img src="imagenes_prueb/imagen11.jpeg" class="img-fluid" alt=""></div>
-            </div>
-        </div>
-
-        <button class="btn-anterior">&#10094;</button>
-        <button class="btn-siguiente">&#10095;</button>
     </div>
 
+    <div class="carrusel">
+        <div class="galeria">
+            <div class="publicacion">
+                <img src="imagenes_prueb/descarga (7).jpeg" class="img-fluid" alt="">
+                <div class="overlay">Imagen 7</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/Hidan e Kakuzo.jpeg" class="img-fluid" alt="">
+                <div class="overlay">Hidan & Kakuzu</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/hunter x hunter.jpeg" class="img-fluid" alt="">
+                <div class="overlay">Hunter x Hunter</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/imagen9.jpeg" class="img-fluid" alt="">
+                <div class="overlay">Imagen 9</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/imagen10.jpeg" class="img-fluid" alt="">
+                <div class="overlay">Imagen 10</div>
+            </div>
+            <div class="publicacion">
+                <img src="imagenes_prueb/imagen11.jpeg" class="img-fluid" alt="">
+                <div class="overlay">Imagen 11</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn-anterior">&#10094;</button>
+    <button class="btn-siguiente">&#10095;</button>
+</div>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
     const carruseles = document.querySelectorAll(".carrusel");
