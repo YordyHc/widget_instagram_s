@@ -42,15 +42,14 @@ class InstaModel {
 
     public function get_publicaciones(){
         $mediaEndpoint = "https://graph.instagram.com/$this->id_canal/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,like_count,comments_count&access_token=$this->apiKey";
-
-        // Obtener las publicaciones de Instagram
         $response = file_get_contents($mediaEndpoint);
-        return json_decode($response,true);
-        // Verificar si hay publicaciones y mostrar los resultados
-        if (isset($response['data'])) {
-            return $response['data'];
+        $data = json_decode($response, true);
+    
+        // Verificar si la respuesta tiene datos válidos
+        if (isset($data['data'])) {
+            return $data['data']; // Retorna solo los datos de las publicaciones
         } else {
-            return [];
+            return []; // Retorna un array vacío si no hay datos
         }
     }
 }
