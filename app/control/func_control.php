@@ -4,10 +4,10 @@ require_once 'app/model/func_model.php';
 class InstaController {
 
     public function mostrarperfil() {
-        /*$instaModel = new YouTubeModel();
+        $instaModel = new InstaModel();
 
-        $videos = $youtubeModel->get_dat_videos();  
-        $datos = $youtubeModel->get_profile();*/
+        $perfil = $instaModel->get_dat_perfil();  
+        $posts = $instaModel->get_publicaciones();
         include $_SERVER['DOCUMENT_ROOT'] . '/widget_insta/app/view/index.php';
     }
 }
