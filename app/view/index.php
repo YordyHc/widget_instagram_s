@@ -12,10 +12,10 @@
 <body>
     <div class="perfil container">
         <div class="perfil-info"> 
-            <img src="<?= $perfil['profile_picture_url']?>" alt="Perfil" class="perfil-img">
+            <a href="https://www.instagram.com/<?= $perfil['username']?>/" target="_blank"><img src="<?= $perfil['profile_picture_url']?>" alt="Perfil" class="perfil-img"></a>
             <div class="perfil-nom">
-                <h2><?= $perfil['name']?><img src="https://placehold.co/400/blue/white" alt="Verificado" class="verificado"></h2>
-                <p>@<?= $perfil['username'] ?></p>
+                <h2><a href="https://www.instagram.com/<?= $perfil['username']?>/" target="_blank"><?= $perfil['name']?><img src="https://placehold.co/400/blue/white" alt="Verificado" class="verificado"></a></h2>
+                <p><a href="https://www.instagram.com/<?= $perfil['username']?>/" target="_blank">@<?= $perfil['username'] ?></a></p>
             </div>
         </div>
         <div class="estats">
@@ -32,7 +32,7 @@
                 <div class="divper">Following</div>
             </div>
         </div>
-        <button class="boton-seg">
+        <button class="boton-seg"  onclick="window.open('https://www.instagram.com/<?= $perfil['username']?>/', '_blank');">
             <i class="fab fa-instagram"></i> Follow
         </button>
     </div>
@@ -109,18 +109,21 @@
 }
 
 
-    function cambiarCarrusel(direccion) {
-        carruseles[carruselIndex].classList.remove('activo');
-        carruselIndex += direccion;
+function cambiarCarrusel(direccion) {
+    carruseles[carruselIndex].classList.remove('activo');
 
-        if (carruselIndex < 0) {
-            carruselIndex = carruseles.length - 1;
-        } else if (carruselIndex >= carruseles.length) {
-            carruselIndex = 0;
-        }
-
-        carruseles[carruselIndex].classList.add('activo');
+    // Si la dirección es positiva (avanzar), solo cambiamos si no estamos en el último carrusel
+    if (direccion === 1 && carruselIndex < carruseles.length - 1) {
+        carruselIndex++;
     }
+    // Si la dirección es negativa (retroceder), solo cambiamos si no estamos en el primer carrusel
+    else if (direccion === -1 && carruselIndex > 0) {
+        carruselIndex--;
+    }
+
+    carruseles[carruselIndex].classList.add('activo');
+}
+
 
     cargarCarrusel();
 
