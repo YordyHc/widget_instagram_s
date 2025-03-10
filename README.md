@@ -49,6 +49,7 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
      - El estado deberá estar en **"pendiente"**.
      - [INGRESA A INSTAGRAM](https://www.instagram.com/?flo=true), logeas la cuenta, dirigete a **"perfil/configuraciones/aplicaciones y sitios web/Invitaciones para evaluadores"** y por ultimo aceptas la invitacion.
      - Continuar solo con el paso 7 del manual [CREA UNA APP META PARA LA PLATAFORMA INSTAGRAM](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/create-a-meta-app-with-instagram)
+     - Copia el **ACCESS TOKEN** y pégalo en la variable `TOKEN_ACCES` dentro del archivo `config.php`.
     
 4. **Obtener el ID DE LA CUENTA**:
    - Para solcitar el id de la cuenta, usa `https://graph.instagram.com/me?fields=id&access_token={ACCESS_TOKEN}`, reemplaza por tu **ACCESS TOKEN** y buscalo en un navegador.
