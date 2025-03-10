@@ -30,10 +30,14 @@ Muestra publicaciones de una cuenta de Instagram profesional(empresa o creador) 
 Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
 1. **Descargar el repositorio**:
-   Clona o descarga el repositorio en tu computadora.
+   - Clona o descarga el repositorio en tu computadora.
+
    
 2. **Cuenta profesional**:
-   - Tener presente que la cuenta de instagram tiene que ser profesional(empresa o creador);sigue el manual de tu preferencia: [CONFIGURAR CUENTA DE CREADOR EN IG](https://help.instagram.com/2358103564437429?helpref=faq_content) [CONFIGURAR CUENTA EMPRESARIAL EN IG](https://help.instagram.com/502981923235522?helpref=faq_content)
+   - Tener presente que la cuenta de instagram tiene que ser profesional(empresa o creador);sigue el manual de tu preferencia:
+     - [CONFIGURAR CUENTA DE CREADOR EN IG](https://help.instagram.com/2358103564437429?helpref=faq_content)
+     - [CONFIGURAR CUENTA EMPRESARIAL EN IG](https://help.instagram.com/502981923235522?helpref=faq_content)
+
      
 3. **Configurar el archivo "config.php"**:
    - Dirígete al archivo `config.php` que se encuentra en la raíz del proyecto.
@@ -41,9 +45,9 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
      - [REGISTRARSE COMO DESARROLLADOR DE META](https://developers.facebook.com/docs/development/register?locale=es_ES)
      - [CREA UNA APP META PARA LA PLATAFORMA INSTAGRAM](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/create-a-meta-app-with-instagram) (Llega solo hasta la primera parte del paso 6)
      - Dirigete a **"Roles de la app/ Roles"**.
-     - Presiona **"agregar personas"**, eliges la opcion **"evaluador de instagram"**, ingresas el usuario (la cuenta de ig que proporcionará el acesso a sus datos) y finalizas presionando **"agregar"**.
+     - Presiona **"agregar personas"**, eliges la opcion **"evaluador de instagram"**, ingresas el usuario de la cuenta de instagram profesonal y finalizas presionando **"agregar"**.
      - El estado deberá estar en **"pendiente"**.
-     - [Ingresa a instagram](https://www.instagram.com/?flo=true), logeas la cuenta, te diriges a **"perfil/configuraciones/aplicaciones y sitios web/Invitaciones para evaluadores"** y por ultimo aceptas la invitacion.
+     - [INGRESA A INSTAGRAM](https://www.instagram.com/?flo=true), logeas la cuenta, dirigete a **"perfil/configuraciones/aplicaciones y sitios web/Invitaciones para evaluadores"** y por ultimo aceptas la invitacion.
      - Continuar solo con el paso 7 del manual [CREA UNA APP META PARA LA PLATAFORMA INSTAGRAM](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/create-a-meta-app-with-instagram)
     
 4. **Obtener el ID DE LA CUENTA**:
