@@ -14,7 +14,7 @@
         <div class="perfil-info"> 
             <a href="https://www.instagram.com/<?= $perfil['username']?>/" target="_blank"><img src="<?= $perfil['profile_picture_url']?>" alt="Perfil" class="perfil-img"></a>
             <div class="perfil-nom">
-                <h2><a href="https://www.instagram.com/<?= $perfil['username']?>/" target="_blank"><?= $perfil['name']?><img src="https://placehold.co/400/blue/white" alt="Verificado" class="verificado"></a></h2>
+                <h2><a href="https://www.instagram.com/<?= $perfil['username']?>/" target="_blank"><?= $perfil['name']?><!--<img src="https://placehold.co/400/blue/white" alt="Verificado" class="verificado">--></a></h2>
                 <p><a href="https://www.instagram.com/<?= $perfil['username']?>/" target="_blank">@<?= $perfil['username'] ?></a></p>
             </div>
         </div>
