@@ -7,6 +7,11 @@ Muestra publicaciones de una cuenta de Instagram profesional(empresa o creador) 
 
 ---
 
+### ENLACE DE MI EJEMPLO:
+- [WIDGET DE INSTAGRAM DESPLEGADO](widgetinstagramyor.infinityfreeapp.com)
+
+---
+
 ### TECNOLOGÍAS USADAS
 - **PHP**
 - **HTML**
