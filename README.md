@@ -8,7 +8,8 @@ Muestra publicaciones de una cuenta de Instagram profesional(empresa o creador) 
 ---
 
 ### ENLACE DE MI EJEMPLO:
-- [WIDGET DE INSTAGRAM DESPLEGADO](widgetinstagramyor.infinityfreeapp.com)
+- copia y pega el siguiente link en algun navegador:
+   - widgetinstagramyor.infinityfreeapp.com
 
 ---
 
