@@ -45,7 +45,7 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
      
 3. **Configurar el archivo "config.php"**:
-   - Dirígete al archivo `config.php` que se encuentra en la raíz del proyecto.
+   - Dirígete al archivo `config.php`  en la ruta `includes/config.php`.
    - Define tu **TOKEN ACCES** en la variable `TOKEN_ACCES`. Si no tienes una, puedes obtenerla siguiendo los siguientes manuales en orden: 
      - [REGISTRARSE COMO DESARROLLADOR DE META](https://developers.facebook.com/docs/development/register?locale=es_ES)
      - [CREA UNA APP META PARA LA PLATAFORMA INSTAGRAM](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/create-a-meta-app-with-instagram) (Llega solo hasta la primera parte del paso 6)
