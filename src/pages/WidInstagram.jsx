@@ -40,7 +40,7 @@ function WidInstagram() {
   };
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto">
       <ProfileCard perfil={perfil} />
 
       <Gallery posts={posts} onOpenPost={openPost} />

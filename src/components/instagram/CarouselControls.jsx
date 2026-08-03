@@ -1,7 +1,7 @@
 import React from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-function CarouselControls(hasPrevious, hasNext, onPrevious, onNext) {
+function CarouselControls({ hasPrevious, hasNext, onPrevious, onNext }) {
   return (
     <>
       <button

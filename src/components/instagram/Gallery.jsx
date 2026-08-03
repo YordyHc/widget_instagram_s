@@ -16,17 +16,16 @@ function Gallery({ posts, onOpenPost }) {
   }, [posts]);
 
   const next = () => {
-    if (currentPage < pages.length - 1) {
-      setCurrentPage(currentPage + 1);
-    }
+    setCurrentPage((prev) => (prev < pages.length - 1 ? prev + 1 : prev));
   };
 
   const previous = () => {
-    if (currentPage > 0) {
-      setCurrentPage(currentPage - 1);
-    }
+    setCurrentPage((prev) => (prev > 0 ? prev - 1 : prev));
   };
 
+  console.log(posts.length);
+  console.log(pages);
+  console.log(currentPage);
   if (!pages.length) return null;
   return (
     <div className="relative mx-auto mt-8 max-w-7xl">

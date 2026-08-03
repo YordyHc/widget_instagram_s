@@ -88,6 +88,36 @@
       "permalink": "https://www.instagram.com/p/C008/",
       "like_count": 299,
       "comments_count": 21
+    },
+    {
+      "id": "17900000000000001",
+      "caption": "Letrero LED personalizado para cafetería ☕✨",
+      "media_type": "IMAGE",
+      "media_url": "https://picsum.photos/id/1015/600/600",
+      "thumbnail_url": "https://picsum.photos/id/1015/600/600",
+      "permalink": "https://www.instagram.com/p/C001/",
+      "like_count": 245,
+      "comments_count": 18
+    },
+    {
+      "id": "17900000000000002",
+      "caption": "Diseño moderno para barbería 💈",
+      "media_type": "IMAGE",
+      "media_url": "https://picsum.photos/id/1016/600/600",
+      "thumbnail_url": "https://picsum.photos/id/1016/600/600",
+      "permalink": "https://www.instagram.com/p/C002/",
+      "like_count": 390,
+      "comments_count": 27
+    },
+    {
+      "id": "17900000000000003",
+      "caption": "Logo en neón para restaurante 🍔",
+      "media_type": "IMAGE",
+      "media_url": "https://picsum.photos/id/1025/600/600",
+      "thumbnail_url": "https://picsum.photos/id/1025/600/600",
+      "permalink": "https://www.instagram.com/p/C003/",
+      "like_count": 520,
+      "comments_count": 34
     }
   ]
 }
