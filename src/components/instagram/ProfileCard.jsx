@@ -4,8 +4,8 @@ import FollowButton from "../instagram/FollowButton";
 function ProfileCard({ perfil }) {
   if (!perfil) return null;
   return (
-    <div className="mx-auto flex w-full max-w-[700px] items-center bg-white px-5 py-4">
-      <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+    <div className="mx-auto flex w-full max-w-[fit-content] items-center px-5 py-4">
+      <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between">
         <div className="flex items-center gap-5">
           <a
             href={`https://www.instagram.com/${perfil.username}/`}
@@ -15,19 +15,11 @@ function ProfileCard({ perfil }) {
             <img
               src={perfil.profile_picture_url}
               alt={perfil.name}
-              className="
-        h-15
-        w-15
-        rounded-full
-        border-[3px]
-        border-[#d6249f]
-        p-[2px]
-        object-cover
-    "
+              className="h-15 w-15 rounded-full border-[3px] border-[#d6249f] p-[2px] object-cover"
             />
           </a>
 
-          <div>
+          <div className="justify-items-start">
             <h2 className="text-2xl font-bold">
               <a
                 href={`https://www.instagram.com/${perfil.username}/`}
@@ -51,7 +43,7 @@ function ProfileCard({ perfil }) {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-5">
+        <div className="flex items-center gap-12">
           <ProfileStats
             mediaCount={perfil.media_count}
             followers={perfil.followers_count}

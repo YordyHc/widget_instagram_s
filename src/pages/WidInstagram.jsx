@@ -3,8 +3,8 @@ import ProfileCard from "../components/instagram/ProfileCard";
 import Gallery from "../components/instagram/Gallery";
 import InstagramModal from "../components/instagram/InstagramModal";
 
-//temporal
-import instagramData from "../mocks/instagram.json";
+//temporal-prueba
+import instagramData from "../mocks/instagramLocal.json";
 
 function WidInstagram() {
   const [perfil, setPerfil] = useState(null);

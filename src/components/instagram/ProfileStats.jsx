@@ -2,7 +2,7 @@ import React from "react";
 
 function ProfileStats({ mediaCount, followers, following }) {
   const Item = ({ number, label }) => (
-    <div className="text-center">
+    <div className="text-start">
       <p className="text-2xl font-bold">{number}</p>
       <p className="text-gray-500">{label}</p>
     </div>

@@ -23,12 +23,9 @@ function Gallery({ posts, onOpenPost }) {
     setCurrentPage((prev) => (prev > 0 ? prev - 1 : prev));
   };
 
-  console.log(posts.length);
-  console.log(pages);
-  console.log(currentPage);
   if (!pages.length) return null;
   return (
-    <div className="relative mx-auto mt-8 max-w-7xl">
+    <div className="relative mx-auto mt-4 mb-7 max-w-7xl">
       <Carousel posts={pages[currentPage]} onOpenPost={onOpenPost} />
 
       <CarouselControls
