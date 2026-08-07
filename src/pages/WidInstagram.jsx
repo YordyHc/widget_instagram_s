@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import ProfileCard from "../components/instagram/ProfileCard";
 import Gallery from "../components/instagram/Gallery";
 import InstagramModal from "../components/instagram/InstagramModal";
-
+import { instagramService } from "../services/instagram";
 //temporal-prueba
-import instagramData from "../mocks/instagramLocal.json";
+//import instagramData from "../mocks/ejemplo.json";
 
 function WidInstagram() {
   const [perfil, setPerfil] = useState(null);
@@ -22,21 +22,24 @@ function WidInstagram() {
 
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
-  /*useEffect(() => {
-    // Aquí irá tu llamada al backend
-    /*
-        const response = await instagramService();
 
-        setPerfil(response.perfil);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await instagramService();
 
-        setPosts(response.posts);
-    
-  }, []);*/
+      setPerfil(response.perfil);
+      setPosts(response.posts);
+    };
 
+    fetchData();
+  }, []);
+
+  /*
+  //para prueba
   useEffect(() => {
     setPerfil(instagramData.perfil);
     setPosts(instagramData.posts);
-  }, []);
+  }, []);*/
 
   const openPost = (post) => {
     setSelectedPost(post);

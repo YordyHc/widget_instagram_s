@@ -56,12 +56,12 @@ function ProfileCard({ perfil }) {
               </a>
             </h2>
 
-            <p className="text-[var(--text)">
+            <p>
               <a
                 href={`https://www.instagram.com/${perfil.username}/`}
                 target="_blank"
                 rel="noreferrer"
-                className="transition-colors duration-300 hover:text-[var(--text-h)]"
+                className="transition-colors duration-300 text-[var(--text)] hover:text-[var(--text-h)]"
               >
                 @{perfil.username}
               </a>
