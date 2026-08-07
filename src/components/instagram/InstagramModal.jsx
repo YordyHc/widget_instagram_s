@@ -43,21 +43,15 @@ function InstagramModal({ isOpen, onClose, permalink }) {
           className="relative w-[100%] md:w-[500px] lg:w-[700px] rounded-xl"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Botón fuera del contenedor */}
-          <button
-            onClick={onClose}
-            className="
-      absolute
-      -right-10
-      top-3
-      z-50
-      text-white
-      hover:scale-110
-      transition-transform
-    "
-          >
-            <FaTimes size={24} />
-          </button>
+          {/* Botón */}
+          <div className="flex justify-end mb-3 md:absolute md:top-1 md:-right-10 md:mb-0">
+            <button
+              onClick={onClose}
+              className="rounded-full bg-black/70 p-2 text-white hover:bg-gray-500 transition-colors duration-1000"
+            >
+              <FaTimes size={20} />
+            </button>
+          </div>
 
           <div ref={embedRef} className="flex justify-center" />
         </div>

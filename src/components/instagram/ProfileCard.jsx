@@ -6,7 +6,7 @@ function ProfileCard({ perfil }) {
   if (!perfil) return null;
   return (
     <div className="mx-auto flex w-full max-w-[fit-content] items-center px-5 py-4">
-      <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between">
+      <div className="md:flex sm:block flex-col items-center gap-12 md:flex-row md:justify-between">
         <div className="flex items-center gap-5">
           <a
             href={`https://www.instagram.com/${perfil.username}/`}
@@ -74,16 +74,21 @@ function ProfileCard({ perfil }) {
               </a>
             </p>
           </div>
+          <div className="md:hidden">
+            <FollowButton username={perfil.username} />
+          </div>
         </div>
 
-        <div className="flex items-center gap-12">
+        <div className="flex items-center gap-12 justify-center sm:pt-6 sm:pb-2">
           <ProfileStats
             mediaCount={perfil.media_count}
             followers={perfil.followers_count}
             following={perfil.follows_count}
           />
 
-          <FollowButton username={perfil.username} />
+          <div className="hidden md:block">
+            <FollowButton username={perfil.username} />
+          </div>
         </div>
       </div>
     </div>
