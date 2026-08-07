@@ -2,6 +2,7 @@ import React from "react";
 import ProfileStats from "../instagram/ProfileStats";
 import FollowButton from "../instagram/FollowButton";
 
+import Checkbox from "./Checkbox";
 function ProfileCard({ perfil }) {
   if (!perfil) return null;
   return (
@@ -14,15 +15,7 @@ function ProfileCard({ perfil }) {
             rel="noreferrer"
             className="group relative inline-block"
           >
-            <div
-              className="
-      rounded-full p-[3px]
-      bg-[linear-gradient(45deg,#833ab4,#c13584,#e1306c,#f56040,#f09f33)]
-      transition-all duration-300
-      group-hover:scale-110
-      group-hover:shadow-[0_0_30px_rgba(225,48,108,.5)]
-    "
-            >
+            <div className="rounded-full p-[3px] bg-[linear-gradient(45deg,#833ab4,#c13584,#e1306c,#f56040,#f09f33)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(225,48,108,.5)]">
               <img
                 src={perfil.profile_picture_url}
                 alt={perfil.name}
@@ -79,7 +72,7 @@ function ProfileCard({ perfil }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-12 justify-center sm:pt-6 sm:pb-2">
+        <div className="flex items-center gap-12 justify-center pt-6 md:pt-0">
           <ProfileStats
             mediaCount={perfil.media_count}
             followers={perfil.followers_count}
@@ -90,6 +83,9 @@ function ProfileCard({ perfil }) {
             <FollowButton username={perfil.username} />
           </div>
         </div>
+      </div>
+      <div className="absolute lg:right-15 top-13 z-10 hidden md:right-8 md:grid">
+        <Checkbox />
       </div>
     </div>
   );

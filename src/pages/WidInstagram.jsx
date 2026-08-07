@@ -13,6 +13,15 @@ function WidInstagram() {
   const [selectedPost, setSelectedPost] = useState(null);
   const [isModalOpen, setModalOpen] = useState(false);
 
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      return savedTheme === "dark";
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
   /*useEffect(() => {
     // Aquí irá tu llamada al backend
     /*
@@ -39,8 +48,18 @@ function WidInstagram() {
     setSelectedPost(null);
   };
 
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
+
   return (
-    <div className="container mx-auto">
+    <div className="min-h-screen bg-white text-black dark:bg-zinc-900 dark:text-white transition-colors duration-300">
       <ProfileCard perfil={perfil} />
 
       <Gallery posts={posts} onOpenPost={openPost} />
