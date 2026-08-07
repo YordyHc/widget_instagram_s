@@ -3,8 +3,8 @@ import React from "react";
 function ProfileStats({ mediaCount, followers, following }) {
   const Item = ({ number, label }) => (
     <div className="text-start">
-      <p className="text-2xl font-bold">{number}</p>
-      <p className="text-gray-500">{label}</p>
+      <p className="text-lg font-bold text-[var(--text)]">{number}</p>
+      <p className="text-[var(--text)]">{label}</p>
     </div>
   );
 

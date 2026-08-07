@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileStats from "../instagram/ProfileStats";
 import FollowButton from "../instagram/FollowButton";
+
 function ProfileCard({ perfil }) {
   if (!perfil) return null;
   return (
@@ -11,11 +12,31 @@ function ProfileCard({ perfil }) {
             href={`https://www.instagram.com/${perfil.username}/`}
             target="_blank"
             rel="noreferrer"
+            className="group relative inline-block"
           >
-            <img
-              src={perfil.profile_picture_url}
-              alt={perfil.name}
-              className="h-15 w-15 rounded-full border-[3px] border-[#d6249f] p-[2px] object-cover"
+            <div
+              className="
+      rounded-full p-[3px]
+      bg-[linear-gradient(45deg,#833ab4,#c13584,#e1306c,#f56040,#f09f33)]
+      transition-all duration-300
+      group-hover:scale-110
+      group-hover:shadow-[0_0_30px_rgba(225,48,108,.5)]
+    "
+            >
+              <img
+                src={perfil.profile_picture_url}
+                alt={perfil.name}
+                className="h-15 w-15 rounded-full border-2 border-[var(--bg)] object-cover"
+              />
+            </div>
+
+            <span
+              className="
+      absolute inset-0 rounded-full
+      bg-white/20 opacity-0 blur-md
+      transition-opacity duration-300
+      group-hover:opacity-100
+    "
             />
           </a>
 
@@ -25,17 +46,29 @@ function ProfileCard({ perfil }) {
                 href={`https://www.instagram.com/${perfil.username}/`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-pink-500 transition"
+                className="
+    inline-block
+    bg-[linear-gradient(45deg,#833ab4_0%,#c13584_25%,#e1306c_50%,#f56040_75%,#f09f33_100%)]
+    bg-[length:300%_300%]
+    bg-[position:0%_50%]
+    bg-clip-text
+    text-transparent
+    transition-[background-position]
+    duration-700
+    ease-in-out
+    hover:bg-[position:100%_50%]
+  "
               >
                 {perfil.name}
               </a>
             </h2>
 
-            <p className="text-gray-500">
+            <p className="text-[var(--text)">
               <a
                 href={`https://www.instagram.com/${perfil.username}/`}
                 target="_blank"
                 rel="noreferrer"
+                className="transition-colors duration-300 hover:text-[var(--text-h)]"
               >
                 @{perfil.username}
               </a>

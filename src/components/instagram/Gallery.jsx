@@ -25,7 +25,7 @@ function Gallery({ posts, onOpenPost }) {
 
   if (!pages.length) return null;
   return (
-    <div className="relative mx-auto mt-4 mb-7 max-w-7xl">
+    <div className="relative mx-auto mb-7 max-w-7xl">
       <Carousel posts={pages[currentPage]} onOpenPost={onOpenPost} />
 
       <CarouselControls
