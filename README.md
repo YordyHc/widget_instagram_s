@@ -7,6 +7,12 @@ profesional. El proyecto se desarrollo con React y Vite y consume un backend que
 
 ![Captura de pantalla 2025-03-10 113054](https://github.com/user-attachments/assets/29b9f499-5b3a-4b56-87d1-9e78e2176a5e)
 
+## Demo
+
+Puedes ver el widget en:
+
+- [widget-instagram-s.vercel.app](https://widget-instagram-s.vercel.app/)
+
 ## ¿Que muestra?
 
 - Informacion del perfil: foto, nombre y usuario
