@@ -1,103 +1,95 @@
-# WIDGET INSTAGRAM FEED
-Este widget permite integrar el feed de Instagram directamente en tu página web. 
-Muestra publicaciones de una cuenta de Instagram profesional(empresa o creador) específica.
+# Widget de Instagram
 
-### Imagen de referencia:
+Frontend de una interfaz para mostrar el feed de una cuenta de Instagram
+profesional. El proyecto se desarrollo con React y Vite y consume un backend que administra la conexion con la API de Instagram.
+
+### Vista previa
+
 ![Captura de pantalla 2025-03-10 113054](https://github.com/user-attachments/assets/29b9f499-5b3a-4b56-87d1-9e78e2176a5e)
 
----
+## ¿Que muestra?
 
-### ENLACE DE MI EJEMPLO:
-- copia y pega el siguiente link en algun navegador:
-   - widgetinstagramyor.infinityfreeapp.com
+- Informacion del perfil: foto, nombre y usuario
+- Cantidad de publicaciones, seguidores y cuentas seguidas
+- Publicaciones organizadas en una galeria de hasta seis elementos por pagina
+- Contenido ampliado mediante el embed oficial de Instagram
+- Enlace directo para seguir la cuenta
+- Tema claro u oscuro
 
----
+## Tecnologias
 
-### TECNOLOGÍAS USADAS
-- **PHP**
-- **HTML**
-- **CSS**
-- **Javascript**
+- React 19
+- Tailwind CSS 4
+- Motion
+- Styled Components
+- React Icons
 
----
+## Funcionamiento
 
-### FRAMEWORK
-- **Bootstrap 5**
-  
----
+La interfaz no se conecta directamente con Instagram. Al cargar
+`src/pages/WidInstagram.jsx`, el servicio realiza una peticion al backend privado
+configurado en el proyecto:
 
-### SERVICIOS A USAR
-- **Cuenta de Meta for developers**
-- **Instagram Api graph**
+```text
+Backend privado + /widinsta
+```
 
----
+La implementacion de esa peticion se encuentra en
+`src/services/instagram.js`. La URL base se obtiene de la variable de entorno
+`VITE_INSTA_API_URL`, por lo que el frontend no contiene access tokens ni
+credenciales de Instagram.
 
-### ¿CÓMO USAR?
-Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
+El backend responde con un perfil y una lista de publicaciones en el siguiente
+formato:
 
-1. **Descargar el repositorio**:
-   - Clona o descarga el repositorio en tu computadora.
+```json
+{
+  "perfil": {
+    "id": "17841400000000000",
+    "username": "usuario",
+    "name": "Nombre de cuenta",
+    "profile_picture_url": "https://ejemplo.com/perfil.jpg",
+    "media_count": 42,
+    "followers_count": 12580,
+    "follows_count": 215
+  },
+  "posts": [
+    {
+      "id": "17900000000000001",
+      "caption": "Descripcion de la publicacion",
+      "media_type": "IMAGE",
+      "media_url": "https://ejemplo.com/publicacion.jpg",
+      "thumbnail_url": "https://ejemplo.com/publicacion.jpg",
+      "permalink": "https://www.instagram.com/p/ejemplo/",
+      "like_count": 245,
+      "comments_count": 18
+    }
+  ]
+}
+```
 
-   
-2. **Cuenta profesional**:
-   - Tener presente que la cuenta de instagram tiene que ser profesional(empresa o creador);sigue el manual de tu preferencia:
-     - [CONFIGURAR CUENTA DE CREADOR EN IG](https://help.instagram.com/2358103564437429?helpref=faq_content)
-     - [CONFIGURAR CUENTA EMPRESARIAL EN IG](https://help.instagram.com/502981923235522?helpref=faq_content)
+## Configuracion del frontend
 
-     
-3. **Configurar el archivo "config.php"**:
-   - Dirígete al archivo `config.php`  en la ruta `includes/config.php`.
-   - Define tu **TOKEN ACCES** en la variable `TOKEN_ACCES`. Si no tienes una, puedes obtenerla siguiendo los siguientes manuales en orden: 
-     - [REGISTRARSE COMO DESARROLLADOR DE META](https://developers.facebook.com/docs/development/register?locale=es_ES)
-     - [CREA UNA APP META PARA LA PLATAFORMA INSTAGRAM](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/create-a-meta-app-with-instagram) (Llega solo hasta la primera parte del paso 6)
-     - Dirigete a **"Roles de la app/ Roles"**.
-     - Presiona **"agregar personas"**, eliges la opcion **"evaluador de instagram"**, ingresas el usuario de la cuenta de instagram profesonal y finalizas presionando **"agregar"**.
-     - El estado deberá estar en **"pendiente"**.
-     - [INGRESA A INSTAGRAM](https://www.instagram.com/?flo=true), logeas la cuenta, dirigete a **"perfil/configuraciones/aplicaciones y sitios web/Invitaciones para evaluadores"** y por ultimo aceptas la invitacion.
-     - Continuar solo con el paso 7 del manual [CREA UNA APP META PARA LA PLATAFORMA INSTAGRAM](https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/create-a-meta-app-with-instagram)
-     - Copia el **ACCESS TOKEN** y pégalo en la variable `TOKEN_ACCES` dentro del archivo `config.php`.
-    
-4. **Obtener el ID DE LA CUENTA**:
-   - Para solcitar el id de la cuenta, usa `https://graph.instagram.com/me?fields=id&access_token={ACCESS_TOKEN}`, reemplaza por tu **ACCESS TOKEN** y buscalo en un navegador.
-   - El **ID de la cuenta** aparecerá como parte de un bloque de código JSON, algo como esto:
-     ```json
-     "id": "19xxxxxxxxxxxxxxxx"
-     ```
-   - Copia el **ID de la cuenta** y pégalo en la variable `ID_CUENTA` dentro del archivo `config.php`.
+Para modificar o ejecutar el codigo localmente se necesitan Node.js 20 o superior
+y npm.
 
-5. **Ejecutar el proyecto**:
-  Para ejecutar el proyecto en tu entorno de desarrollo local, sigue estos pasos:
+El archivo `.env` define la direccion del backend privado:
 
----
+```env
+VITE_INSTA_API_URL=https://puerto-de-tu-backend.com/api
+```
 
-#### Opción A: Usando XAMPP
+No se debe incluir `/widinsta` al final de la variable. El servicio lo agrega
+automaticamente al construir la peticion.
 
-1. **Instalar XAMPP**:
-   - Si no tienes XAMPP instalado, ve a [XAMPP](https://www.apachefriends.org/es/index.html) y descarga la versión adecuada para tu sistema operativo (Windows, macOS, Linux).
-   - Instala XAMPP y asegúrate de que Apache y MySQL estén corriendo.
+## Datos de prueba
 
-2. **Colocar el proyecto en la carpeta "htdocs"**:
-   - Dirígete a la carpeta donde instalaste XAMPP, usualmente en `C:\xampp\htdocs` (en Windows).
-   - Coloca la carpeta del proyecto dentro de `htdocs` (por ejemplo, `C:\xampp\htdocs\widget_instagram_s`).
+La carpeta `src/mocks` contiene datos locales de ejemplo. Aunque el proyecto
+esta preparado para consumir el backend privado, el archivo
+`src/mocks/ejemplo.json` puede usarse temporalmente durante el desarrollo desde
+`src/pages/WidInstagram.jsx`.
 
-3. **Abrir el proyecto en tu navegador**:
-   - Abre tu navegador y ve a `http://localhost/widget_instagram_s` (si nombraste la carpeta del proyecto "widget_instagram_s").
-   - ¡El proyecto debería funcionar!
+## Comportamiento ante errores
 
----
-
-#### Opción B: Usando Laragon
-
-1. **Instalar Laragon**:
-   - Si prefieres usar Laragon, ve a [Laragon](https://laragon.org/) y descarga la última versión.
-   - Instala Laragon en tu sistema.
-
-2. **Colocar el proyecto en la carpeta "www"**:
-   - Dirígete a la carpeta `www` dentro de Laragon (por lo general, `C:\laragon\www`).
-   - Coloca la carpeta del proyecto dentro de `www` (por ejemplo, `C:\laragon\www\widget_instagram_s`).
-
-3. **Abrir el proyecto en tu navegador**:
-   - Abre tu navegador y ve a `http://localhost/widget_instagram_s` (si nombraste la carpeta del proyecto "widget_instagram_s").
-   - ¡El proyecto debería funcionar!
-
----
+Si `VITE_INSTA_API_URL` no esta definida o el backend no responde, el servicio
+registra el error en la consola y muestra la interfaz sin perfil ni publicaciones.
